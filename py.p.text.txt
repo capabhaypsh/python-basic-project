@@ -1,0 +1,411 @@
+with open("q1w.csv", 'rb') as csvfile:
+content = csv.reader('C:\q1w.csv')
+    for row in content:
+         print ("|".join([row[1], row[2], row[3],row[4]])
+
+
+=========================================
+column printing method for csv file.    //
+=========================================
+import csv
+with open('C:\q1w.csv','rt')as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for lines in csv_reader:
+        print(lines[0])
+
+==========================================
+                                          //
+paragraph printing method for csv file.  // 
+==========================================
+import csv
+with open('C:\q2w.csv','rt')as csv_file:
+    csv_reader = csv.reader (csv_file, delimiter=',',skipinitialspace=True, doublequote=False)
+    for lines in csv_reader:
+        print(lines[0],lines[1],lines[2],lines[3],lines[4],lines[5],lines[6])
+
+===========================================
+Print with Hello                         //
+===========================================
+
+
+import csv
+with open('C:\q2w.csv','rt')as csv_file:
+    csv_reader = csv.reader (csv_file, delimiter=',',skipinitialspace=True, doublequote=False)
+    for lines in csv_reader:
+        print('Hello',lines[0],lines[1],lines[2],lines[3],lines[4],lines[5],lines[6])
+
+
+======================================================================================================================================================================
+you can print all these programme with pandas pckages other different method                                          						  ///
+====================================================================================================================================================================
+==============
+star printing/
+=============
+for i in range(0, 5):
+    for j in range(0, i+1):
+        print("* ",end="")
+    print()
+
+===================================
+k = 1
+for i in range(0, 5):
+    for j in range(0, k):
+        print("* ", end="")
+    k = k + 2
+    print()
+
+==================================
+k = 8
+for i in range(0, 5):
+    for j in range(0, k):
+        print(end=" ")
+    k = k - 2
+    for j in range(0, i+1):
+        print("* ", end="")
+    print()
+==================================
+k = 16
+t = 1
+for i in range(0, 5):
+    for j in range(0, k):
+        print(end=" ")
+    k = k - 4
+    for j in range(0, t):
+        print("* ", end="")
+    t = t + 2
+    print()
+==================================
+
+k = 0
+rows = 10
+for i in range(1, rows+1):
+    for space in range(1, (rows-i)+1):
+        print(end="  ")
+    while k != (2*i-1):
+        print("* ", end="")
+        k = k + 1
+    k = 0
+    print()
+=========================================
+# Python Program - Check Alphabet or Not//
+=========================================
+print("Enter '0' for exit.");
+ch = input("Enter any character: ");
+if ch == '0':
+    exit();
+else:
+    if((ch>='a' and ch<='z') or (ch>='A' and ch<='Z')):
+    	print(ch, "is an alphabet.");
+    else:
+    	print(ch, "is not an alphabet.");
+
+============================================
+# Python Program - Check Even or Odd
+============================================		
+print("Enter 'x' for exit.");
+num = input("Enter any number: ");
+if num == 'x':
+    exit();
+try:
+    number = float(num);
+except ValueError:
+    print("Please, enter a number...");
+else:
+    check = number%2;
+    if check == 0:
+    	    print(int(number), "is an even number.");
+    elif check == 1:
+    	print(int(number), "is an odd number.");
+    else:
+    	print(number, "is strange.");
+
+===========================================================
+
+# Python Program - Calculate Average and Percentage Marks
+
+==========================================================
+	
+=======================================================================================================================================================================
+                                                                                                                                               ////////////////////////
+Matplot in pytyhon                    													      ////////////////////////
+=====================================================================================================================================================================
+import matplotlib.pyplot as plt
+plt.plot([2,3,4,5],[3,8,10,12],'gs')
+plt.show()
+
+=======================================================
+
+import matplotlib.pyplot as plt
+
+x=[1,2,3,4,5]
+y=[100,200,300,400,500]
+
+plt.bar(x,y)
+plt.show()
+=======================================================
+import matplotlib.pyplot as plt
+
+x=[1,2,3,4,5]
+y=[100,200,300,400,500]
+
+plt.barh(x,y,color='r''g''b')
+plt.show()
+
+=======================================================
+plot/bar/barh                           ///////////////
+                                       ///////////////
+=======================================================
+
+import matplotlib.pyplot as plt
+import numpy as np
+t=np.arange(0,5,0.2)
+plt.plot(t,t,'r--',t,t**3,'b^',t,t**2,'gs')
+plt.show()
+
+=======================================================
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4,5])
+plt.xlabel('Actual birth weight')
+plt.ylabel('Estimated birth weight')
+plt.show()
+=======================================================
+import matplotlib.pyplot as plt
+import csv
+
+x = []
+y = []
+
+with open("C:\q3w.csv", 'r') as csvfile:
+    plots = csv.reader(csvfile, delimiter=',')
+    for row in plots:
+        x.append(int(row[0]))
+        y.append(int(row[1]))
+
+plt.plot(x, y, marker='o')
+
+plt.title('Data from the CSV File: People and Expenses')
+
+plt.xlabel('Number of People')
+plt.ylabel('Expenses')
+
+plt.show()
+========================================================
+
+
+import matplotlib.pyplot as plt
+
+slices = [10,3,4,14]
+activities = ['sleeping','eating','working','playing']
+cols = ['c','m','r','b']
+
+plt.pie(slices,
+        labels=activities,
+        colors=cols,
+        startangle=90,
+        shadow= True,
+        explode=(0,0.1,0,0),
+        autopct='%2.1f%%')
+
+plt.title('Interesting Graph\nCheck it out')
+plt.show()
+
+
+==========================================================
+wrong????????????????????????????????!!!!!!!!!!!!!!!!!!!
+==========================================================
+import matplotlib.pyplot as plt
+import pandas as pd
+df =  pd.read_csv('C:\q4w.csv')
+country_data = df["country"]
+medal_data = df["gold_medal"]
+colors = ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#8c564b"]
+explode = (0.1, 0, 0, 0, 0)  
+plt.pie(medal_data, labels=country_data, explode=explode, colors=colors,
+autopct='%1.1f%%', shadow=True, startangle=140)
+plt.title("Gold medal achievements of five most successful\n"+"countries in 2016 Summer Olympics")
+plt.show()
+
+=======================================================================
+import matplotlib.pyplot as plt
+import pandas as pd
+girls_grades = [89, 90, 70, 89, 100, 80, 90, 100, 80, 34]
+boys_grades = [30, 29, 49, 48, 100, 48, 38, 45, 20, 30]
+grades_range = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+plt.scatter(grades_range, girls_grades, color='r')
+plt.scatter(grades_range, boys_grades, color='g')
+plt.xlabel('Grades Range')
+plt.ylabel('Grades Scored')
+plt.show()
+
+=========================================================================
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+
+style.use('ggplot')
+
+x = [5,8,10]
+y = [12,16,6]
+
+x2 = [6,9,11]
+y2 = [6,15,7]
+
+# can plot specifically, after just showing the defaults:
+plt.plot(x,y,linewidth=5)
+plt.plot(x2,y2,linewidth=5)
+
+plt.title('Epic Info')
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+
+plt.show()
+
+=======================================================================
+                                                             ///////////
+SINE WAVE                                                   ///////////
+                                                           ///////////
+=======================================================================
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0, 10, 0.2)
+y = np.cos(x)
+fig, ax = plt.subplots()
+ax.plot(x, y)
+plt.show()
+
+
+======================================================================
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 2, 100)
+
+plt.plot(x, x, label='linear')
+plt.plot(x, x**2, label='quadratic')
+plt.plot(x, x**3, label='cubic')
+
+plt.xlabel('x label')
+plt.ylabel('y label')
+
+plt.title("Simple Plot")
+
+plt.legend()
+
+plt.show()
+
+======================================================================
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+
+fig, ax_lst = plt.subplots(2, 2)  # a figure with a 2x2 grid of Axes
+
+plt.show()
+
+======================================================================
+Image printinmg                                           ////////////
+                                                         ////////////
+======================================================================
+
+from scipy import ndimage, misc
+from matplotlib import pyplot as plt
+panda = misc.face()
+#rotatation function of scipy for image – image rotated 135 degree
+panda_rotate = ndimage.rotate(panda, 135)
+plt.imshow(panda_rotate)
+plt.show()
+
+======================================================================
+
+
+from scipy import misc
+from matplotlib import pyplot as plt
+import numpy as np
+#get face image of panda from misc package
+panda = misc.face()
+#plot or show image of face
+plt.imshow( panda )
+plt.show()
+
+=======================================================================================================================================================================
+                                                     /////////////////
+Reading pdf file in python by using pypdf2 packages /////////////////
+=======================================================================================================================================================================
+
+# importing required modules
+import PyPDF2
+
+# creating a pdf file object
+pdfFileObj = open('C:\q6w.pdf', 'rb')
+
+# creating a pdf reader object
+pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
+
+# printing number of pages in pdf file
+print(pdfReader.numPages)
+
+# creating a page object
+pageObj = pdfReader.getPage(0)
+
+# extracting text from page
+print(pageObj.extractText())
+
+# closing the pdf file object
+pdfFileObj.close()
+
+=====================================================================
+2.TO  read pdf in python
+=====================================================================
+
+import PyPDF2
+
+pdfName = 'c:\q6w.pdf'
+read_pdf = PyPDF2.PdfFileReader(pdfName)
+page = read_pdf.getPage(0)
+page_content = page.extractText()
+print (page_content)
+
+===================================================================
+open pdf in python command
+
+===================================================================
+
+import webbrowser
+webbrowser.open_new(r'file://C:\q6w.pdf')
+-----------------------------------------
+import os
+os.startfile('c:\q6w.pdf')
+
+
+=======================================================================================================================================================================
+			 				Django project on Eclipse.
+			
+					*	---****	printing Hello world via urls****--- 	*			
+
+=======================================================================================================================================================================
+
+veiews-file
+
+from django.shortcuts import render
+from django.http.response import HttpResponse
+
+# Create your views here.
+
+def home(req):
+    return HttpResponse("<h1>Hello World</h1>")
+
+====urls file====
+from django.contrib import admin
+from django.urls import path
+from college import views
+
+
+urlpatterns = [
+    path('', views.home),
+    path('admin/', admin.site.urls),
+]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+=======================================================================================================================================================================
+
+
