@@ -1,0 +1,368 @@
+with open("q1w.csv", 'rb') as csvfile:
+content = csv.reader('C:\q1w.csv')
+    for row in content:
+         print ("|".join([row[1], row[2], row[3],row[4]])
+
+
+=========================================
+column printing method for csv file.    //
+=========================================
+import csv
+with open('C:\q1w.csv','rt')as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for lines in csv_reader:
+        print(lines[0])
+
+==========================================
+                                          //
+paragraph printing method for csv file.  // 
+==========================================
+import csv
+with open('C:\q2w.csv','rt')as csv_file:
+    csv_reader = csv.reader (csv_file, delimiter=',',skipinitialspace=True, doublequote=False)
+    for lines in csv_reader:
+        print(lines[0],lines[1],lines[2],lines[3],lines[4],lines[5],lines[6])
+
+===========================================
+Print with Hello                         //
+===========================================
+
+
+import csv
+with open('C:\q2w.csv','rt')as csv_file:
+    csv_reader = csv.reader (csv_file, delimiter=',',skipinitialspace=True, doublequote=False)
+    for lines in csv_reader:
+        print('Hello',lines[0],lines[1],lines[2],lines[3],lines[4],lines[5],lines[6])
+
+
+==========================================================================================================================
+you can print all these programme with pandas pckages other different method for read and write                        ///
+==========================================================================================================================
+==============
+star printing/
+=============
+for i in range(0, 5):
+    for j in range(0, i+1):
+        print("* ",end="")
+    print()
+
+===================================
+k = 1
+for i in range(0, 5):
+    for j in range(0, k):
+        print("* ", end="")
+    k = k + 2
+    print()
+
+==================================
+k = 8
+for i in range(0, 5):
+    for j in range(0, k):
+        print(end=" ")
+    k = k - 2
+    for j in range(0, i+1):
+        print("* ", end="")
+    print()
+==================================
+k = 16
+t = 1
+for i in range(0, 5):
+    for j in range(0, k):
+        print(end=" ")
+    k = k - 4
+    for j in range(0, t):
+        print("* ", end="")
+    t = t + 2
+    print()
+==================================
+
+k = 0
+rows = 10
+for i in range(1, rows+1):
+    for space in range(1, (rows-i)+1):
+        print(end="  ")
+    while k != (2*i-1):
+        print("* ", end="")
+        k = k + 1
+    k = 0
+    print()
+==================================
+#python revert direction printing
+for i in range(0, 5):
+    for j in range(5, i, -1):
+        print("* ", end="")
+    print()
+================================
+
+=================================================================================
+Write a programme to exit when you enter 'x' in programme
+=================================================================================
+print("Enter 'x' for exit.");
+val = input();
+if val == 'x':
+    exit();
+else:
+    print("Welcome to Python from codescracker.com!");
+
+=================================================================================
+10 to 100, then What a guess..!!
+0 to 9, Opps..!!
+=================================================================================
+print("Enter '0' for exit.");
+val = int(input("Guess a Number: "));
+if val == 0:
+    exit();
+elif(val>10 and val<100):
+    print("What a guess..!!\n");
+else:
+    print("Opps..!!\n");
+=====================================
+programme for asking are you a robot ?
+=====================================
+print("Enter 'x' for exit.");
+check = input("Are you a Robot ? ");
+if check == 'x':
+    exit();
+elif(check == 'yes'):
+    print("Sorry!, you can not proceed.\n");
+else:
+    print("Congrats!, you can proceed.\n");
+
+==========================================
+Calculate area of square.    /////////////
+==========================================
+print("Enter 'x' for exit.");
+side = input("Enter side length of Square: ");
+if side == 'x':
+    exit();
+else:
+    side_length = int(side);
+    area_square = side_length*side_length;
+    print("\nArea of Square =",area_square);
+
+=============================================
+# Python Program - Calculate Area of Rectangle
+
+print("Enter 'x' for exit.");
+leng = input("Enter length of Rectangle: ");
+if leng == 'x':
+    exit();
+else:
+    brea = input("Enter breadth of Rectangle: ");
+    length = int(leng);
+    breadth = int(brea);
+    area = length*breadth;
+    print("\nArea of Rectangle =",area);
+
+=============================================
+# Python Program - Calculate Area of Triangle
+
+print("Enter 'x' for exit.");
+side1 = input("Enter length of first side: ");
+if side1 == 'x':
+    exit();
+else:
+    side2 = input("Enter length of second side: ");
+    side3 = input("Enter length of third side: ");
+    a = float(side1);
+    b = float(side2);
+    c = float(side3);
+    s = (a + b + c)/2;
+    area = (s*(s-a)*(s-b)*(s-c)) ** 0.5;
+    print("\nArea of Triangle = %0.2f" %area);
+
+================================================
+# Python Program - Calculate Area of Circle
+
+print("Enter 'x' for exit.");
+rad = input("Enter radius of circle: ");
+if rad == 'x':
+    exit();
+else:
+    radius = float(rad);
+    area = 3.14 * radius * radius;
+    print("\nArea of Circle = %0.2f" %area);
+
+
+================================================
+# Python Program - Calculate Perimeter of Square
+
+print("Enter 'x' for exit.");
+side = input("Enter side length of square: ");
+if side == 'x':
+    exit();
+else:
+    slength = int(side);
+    perimeter = 4*slength;
+    print("\nPerimeter of Square =", perimeter);
+
+===================================================
+# Python Program - Calculate Perimeter of Rectangle
+
+print("Enter 'x' for exit.");
+leng = input("Enter length of rectangle: ");
+if leng == 'x':
+    exit();
+else:
+    brea = input("Enter breadth of rectangle: ");
+    length = int(leng);
+    breadth = int(brea);
+    perimeter = (2*length) + (2*breadth);
+    print("\nPerimeter of Rectangle =", perimeter);
+
+=====================================================
+# Python Program - Calculate Perimeter of Triangle
+
+print("Enter 'x' for exit.");
+len1 = input("Enter length of first side: ");
+if len1 == 'x':
+    exit();
+else:
+    len2 = input("Enter length of second side: ");
+    len3 = input("Enter length of third side: ");
+    length1 = int(len1);
+    length2 = int(len2);
+    length3 = int(len3);
+    perimeter = length1 + length2 + length3;
+    print("\nPerimeter of Triangle =", perimeter);
+
+=====================================================
+# Python Program - Calculate Circumference of Circle
+
+print("Enter 'x' for exit.");
+rad = input("Enter radius of circle: ");
+if rad == 'x':
+    exit();
+else:
+    radius = float(rad);
+    circumference = 2*3.14*radius;
+    print("\nCircumference of Circle =",circumference);
+
+======================================================
+# Python Program - Check Even or Odd
+		
+print("Enter 'x' for exit.");
+num = input("Enter any number: ");
+if num == 'x':
+    exit();
+try:
+    number = float(num);
+except ValueError:
+    print("Please, enter a number...");
+else:
+    check = number%2;
+    if check == 0:
+    	    print(int(number), "is an even number.");
+    elif check == 1:
+    	print(int(number), "is an odd number.");
+    else:
+    	print(number, "is strange.");
+
+=======================================================
+# Python Program - Check Alphabet or Not
+
+print("Enter '0' for exit.");
+ch = input("Enter any character: ");
+if ch == '0':
+    exit();
+else:
+    if((ch>='a' and ch<='z') or (ch>='A' and ch<='Z')):
+    	print(ch, "is an alphabet.");
+    else:
+    	print(ch, "is not an alphabet.");
+
+=======================================================
+
+
+num = int(input(5
+"Enter the number"))
+factorial = 1
+
+if num<=0:
+    print("sorry")
+elif num==0:
+    print("number is 1")
+else :
+    for i in range (1,num+1):
+        factorial = factorial*i
+    print("The factorial of", num,"is",factorial)
+
+
+======================================================
+
+print("This is the guessing game")
+import random
+random_number = random.randrange(1,20)
+guess = int(input("what could be the number:"))
+correct = False
+print(random_number)
+
+while not correct:
+    if guess ==random_number:
+        print("Too high")
+        break
+    elif guess<random_number:
+        print("Too low")
+        break
+    else :
+     print("Try something else")
+     break
+
+========================================================
+
+print("Welcome to SBI bank")
+restart = ('y')
+chances =3
+balance=1000
+while chances >=0:
+    pin = int(input("Please enter your 4 digit number pin :"))
+    if pin == (1234):
+        print("You enter pin correctly\n")
+        while restart ('n','No','no','N' ):
+            print('Please press 1 for your balance\n')
+            print('Please press 2 for your withdrawl\n')
+            print('Please press 3 for your pay in\n')
+            print('Please press 4 for your return card\n')
+            options=int(input("What would you to like to choose"))
+            if options==1:
+                print("Your balance is equal, '$','\n'")
+                restart= input("would like to go back")
+                if restart('n','No','no','N'):
+                    print('Thank you for banking with SBI')
+                    break
+            elif options==2:
+                options2 = ('y')
+                withdrawl = float(input('How much would you like to withdraw? \n$10/$20/$30/$40'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================================================
+int=int(input('Enter any number:'))
+int=(int)**.5
+print('The value of number is ',int,)
+
+========================================================
+
+a=int(input('variable1:'))
+b=int(input('variable2:'))
+print('Addition of two value',a+b,)
+
+
+
+
